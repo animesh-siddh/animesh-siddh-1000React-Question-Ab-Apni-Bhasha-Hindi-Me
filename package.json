@@ -18,8 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +42,5 @@
   "devDependencies": {
     "gh-pages": "^6.3.0"
   },
-"homepage": "https://animesh-siddh.github.io/1000React-Question-Ab-Apni-Bhasha-Hindi-Me"
-
+  "homepage": "https://animesh-siddh.github.io/animesh-siddh-1000React-Question-Ab-Apni-Bhasha-Hindi-Me"
 }
