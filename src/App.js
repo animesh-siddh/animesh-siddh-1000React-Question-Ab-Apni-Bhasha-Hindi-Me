@@ -262,7 +262,135 @@ const qaData = [
     answer: "JSX ek syntax extension hai jo HTML jaise dikhne wale code ko JavaScript me likhne deta hai. React me JSX ko Babel convert karta hai into `React.createElement` calls, jo ek JS object return karta hai. Fir React us object ko DOM me render karta hai.",
     category: "react",
     icon: <Code className="w-5 h-5" />
-  }
+  },
+  {
+  id: 37,
+  question: "Virtual DOM memory me kaha store hota hai?",
+  answer:
+    "Virtual DOM ek JavaScript object hota hai jo React banata hai, lekin ye browser ke JavaScript Engine (jaise Chrome ka V8) ki memory me store hota hai. React ki apni koi memory nahi hoti — sab kuch browser ke JS environment me run hota hai. Isliye virtual DOM sirf ek logical layer hai jo real DOM se pehle memory me manage ki jati hai.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 38,
+  question: "Virtual DOM render hone se pehle ban jata hai kya?",
+  answer:
+    "Haan! React.createElement se virtual DOM pehle hi ban jata hai. Uske baad React old aur new virtual DOM ko compare karta hai (reconciliation), fir ReactDOM.render ke zariye final real DOM update hota hai.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 39,
+  question: "Kya React Virtual DOM me head ya body tag hota hai?",
+  answer: "Nahi. Virtual DOM sirf usi part ka representation hota hai jo React ke control me hota hai — usually root div ke andar ka. <html>, <head>, aur <body> tags React manage nahi karta, wo static HTML file me hote hain.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 40,
+  question: "What is the difference between JS and JSX extension?",
+  answer: "JS aur JSX dono me end result JavaScript hi hota hai. JSX ek syntax extension hai jo React me HTML-like code likhne ki facility deta hai. Babel JSX ko JavaScript me convert karta hai jo React.createElement calls me badal jata hai.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 41,
+  question: "What is Named Export?",
+  answer: "Named export tab use hota hai jab ek file se multiple values export karni ho. Import karte waqt wahi naam use karna padta hai jo export hua hai. Example: import { resList } from './utils/constants'.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 42,
+  question: "What is Default Export?",
+  answer: "Default export tab use hota hai jab ek file me ek hi main component ya value export karni ho. Import karte waqt ise custom naam se import kiya ja sakta hai. Example: import MyComponent from './MyComponent'.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 43,
+  question: "Can I use default export with named export?",
+  answer: "Haan, ek file me default export aur named export dono ek saath use kiye ja sakte hain. JavaScript me koi restriction nahi hai. General practice me agar ek file me ek hi main component ho to default export use hota hai, aur agar multiple exports ho to named exports ka use hota hai.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 44,
+  question: "Why React is Fast?",
+  answer: "React fast hai kyunki ye Virtual DOM ka use karke DOM manipulation ko optimize karta hai. Ye Virtual DOM banata hai, purane Virtual DOM ke saath compare karta hai (diffing algorithm use karke) aur sirf changed parts ko Actual DOM me update karta hai.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 45,
+  question: "What is React Fiber?",
+  answer: "React Fiber ek reconciliation engine hai jo React 16 me introduce hua tha. Ye rendering ko flexible aur interruptible banata hai. Ye rendering ka kaam small chunks me tod kar karta hai aur diffing algorithm ka use karke old aur new Virtual DOM compare karta hai. Isse React asynchronous rendering provide karta hai, jisse updates ko pause, resume aur prioritize kiya ja sakta hai.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 46,
+  question: "What is React Reconciliation?",
+  answer: "React Reconciliation ek process hai jisme React new Virtual DOM ko previous Virtual DOM ke saath compare karta hai (diffing algorithm ka use karke) aur jo changes detect hote hain unhe efficiently Actual DOM me update karta hai.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 47,
+  question: "What is Incremental Rendering?",
+  answer: "Incremental rendering ka matlab hai pura UI ek saath render karne ke bajaye usko chhote-chhote chunks me tod kar render karna. Isse high-priority UI elements pehle load hote hain, page jaldi render hota hai aur user experience improve hota hai.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 48,
+  question: "What is State?",
+  answer: "State ek React component ka special data storage hota hai jisme component-specific dynamic data store hota hai. Jab state change hoti hai, React component ko re-render karta hai taaki UI latest data ke saath update ho.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 49,
+  question: "Why is State a powerful variable?",
+  answer: "State powerful hai kyunki ye sirf data store nahi karta, balki UI ke behaviour ko control karta hai. State change hone par component automatic re-render hota hai aur UI latest data ke saath sync me rehta hai.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 50,
+  question: "What is useState Hook?",
+  answer: "useState ek React Hook hai jo functional components me state manage karne ke liye use hota hai. Ye ek array return karta hai — pehla element state value hota hai, aur dusra element state update karne ka function hota hai.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 51,
+  question: "What is Diffing Algorithm?",
+  answer: "Diffing algorithm ek comparison process hai jisme React old Virtual DOM aur new Virtual DOM ko compare karke sirf changed parts ko Actual DOM me update karta hai. Isse rendering fast hoti hai.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 52,
+  question: "Is Virtual DOM a JavaScript Object?",
+  answer: "Haan, Virtual DOM ek JavaScript object hota hai jo Actual DOM ka lightweight representation hota hai. First render me poora Virtual DOM tree Actual DOM me mount hota hai. Re-render me naya Virtual DOM banakar purane se compare hota hai aur sirf changes update hote hain.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 53,
+  question: "What is Re-rendering?",
+  answer: "Re-rendering wo process hai jisme state ya props change hone par React component ka naya Virtual DOM banata hai, purane Virtual DOM se compare karta hai aur jo changes hote hain unhe Actual DOM me update karta hai.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
+{
+  id: 54,
+  question: "What is CONFIG DRIVEN UI?",
+  answer: "Config Driven UI ka matlab hai ki aap UI ko manually hardcode nahi karte, balki ek config (jaise array of objects) ke through dynamically banaate ho. Is config me define hota hai — kaunse fields, kaunsa type, label, validation, etc. Isse ek hi component ko multiple jagah reuse kiya ja sakta hai by just changing the config.",
+  category: "react",
+  icon: <Code className="w-5 h-5" />
+},
     
 ];
 
